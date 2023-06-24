@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		99E2FBEB2A46C9F800A7960B /* Compliment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2FBEA2A46C9F800A7960B /* Compliment.swift */; };
+		99E2FBED2A46CD9900A7960B /* ComplimentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2FBEC2A46CD9900A7960B /* ComplimentsView.swift */; };
+		99E2FBEF2A46CDB600A7960B /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2FBEE2A46CDB600A7960B /* PetView.swift */; };
+		99E2FBF12A46CDF100A7960B /* ComplimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2FBF02A46CDF100A7960B /* ComplimentView.swift */; };
 		D16E97A92A46A2FD000D8403 /* Quirky_Compliments_Make_Me_Happy___App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16E97A82A46A2FD000D8403 /* Quirky_Compliments_Make_Me_Happy___App.swift */; };
 		D16E97AB2A46A2FD000D8403 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16E97AA2A46A2FD000D8403 /* ContentView.swift */; };
 		D16E97AD2A46A2FE000D8403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D16E97AC2A46A2FE000D8403 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		99E2FBEA2A46C9F800A7960B /* Compliment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compliment.swift; sourceTree = "<group>"; };
+		99E2FBEC2A46CD9900A7960B /* ComplimentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplimentsView.swift; sourceTree = "<group>"; };
+		99E2FBEE2A46CDB600A7960B /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
+		99E2FBF02A46CDF100A7960B /* ComplimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplimentView.swift; sourceTree = "<group>"; };
 		D16E97A52A46A2FD000D8403 /* Quirky Compliments Make Me Happy!!!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quirky Compliments Make Me Happy!!!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D16E97A82A46A2FD000D8403 /* Quirky_Compliments_Make_Me_Happy___App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quirky_Compliments_Make_Me_Happy___App.swift"; sourceTree = "<group>"; };
 		D16E97AA2A46A2FD000D8403 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,7 +82,10 @@
 		D16E979C2A46A2FD000D8403 = {
 			isa = PBXGroup;
 			children = (
+				99E2FBEC2A46CD9900A7960B /* ComplimentsView.swift */,
+				99E2FBEE2A46CDB600A7960B /* PetView.swift */,
 				99E2FBEA2A46C9F800A7960B /* Compliment.swift */,
+				99E2FBF02A46CDF100A7960B /* ComplimentView.swift */,
 				D16E97A72A46A2FD000D8403 /* Quirky Compliments Make Me Happy!!! */,
 				D16E97B82A46A2FE000D8403 /* Quirky Compliments Make Me Happy!!!Tests */,
 				D16E97C22A46A2FE000D8403 /* Quirky Compliments Make Me Happy!!!UITests */,
@@ -262,7 +271,10 @@
 			files = (
 				D16E97AB2A46A2FD000D8403 /* ContentView.swift in Sources */,
 				D16E97A92A46A2FD000D8403 /* Quirky_Compliments_Make_Me_Happy___App.swift in Sources */,
+				99E2FBF12A46CDF100A7960B /* ComplimentView.swift in Sources */,
+				99E2FBED2A46CD9900A7960B /* ComplimentsView.swift in Sources */,
 				99E2FBEB2A46C9F800A7960B /* Compliment.swift in Sources */,
+				99E2FBEF2A46CDB600A7960B /* PetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

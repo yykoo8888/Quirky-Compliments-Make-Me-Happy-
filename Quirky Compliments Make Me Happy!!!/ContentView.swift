@@ -10,12 +10,12 @@ import SwiftUI
 struct ContentView: View {
     
     let compliments = [
-        "Your smile is contagious, like a laughter epidemic!",
-        "You're so cool, you make ice jealous.",
-        "You're a master of randomness, in a good way!",
-        "Your fashion sense is out of this world, literally!",
-        "Your jokes should be in a museum because they're truly works of art.",
-        "You have a heart of gold, and I'm not just talking about your jewelry."
+        Compliment(setup:"Your smile is contagious, like a laughter epidemic!"),
+        Compliment(setup:"You're so cool, you make ice jealous."),
+        Compliment(setup:"You're a master of randomness, in a good way!"),
+        Compliment(setup:"Your fashion sense is out of this world, literally!"),
+        Compliment(setup:"Your jokes should be in a museum because they're truly works of art."),
+        Compliment(setup:"You have a heart of gold, and I'm not just talking about your jewelry."),
     ]
     
     @State private var index = 0
@@ -29,10 +29,6 @@ struct ContentView: View {
             Text("Quirky Compliments")
                 .font(.largeTitle)
                 .padding()
-            if showCompliment == true {
-                Text(compliments[index])
-                    .multilineTextAlignment(.center)
-            }
             Button {
                 withAnimation{
                     showCompliment = true
@@ -42,14 +38,18 @@ struct ContentView: View {
                 Text("Generate Compliment")
                     .font(.title)
                     .padding()
-                    .background(.blue)
+                    .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-            
+            if showCompliment == true {
+                Text(compliments[index].setup)
+                    .multilineTextAlignment(.center)
+                    .font(.title)
+            }
     //VStack closing
         }
-        .alert("Did you like that compliments?", isPresented: $showAlert) {
+        .alert("Did you like that compliment?", isPresented: $showAlert) {
             Button("Yes!!!", role: .cancel){
                 isPositiveFeedback = true
             }
@@ -61,15 +61,14 @@ struct ContentView: View {
             showAlert = true
             if showCompliment {
                 index += 1
-                showCompliment = false
-                if index == compliments.count {
-                    index = 0
-                    print("Restarted")
+            //showCompliment = false
+            }
+            if index == compliments.count {
+                index = 0
+                print("Restarted")
                     
-                }
             }
         }
-       
     }
 }
 

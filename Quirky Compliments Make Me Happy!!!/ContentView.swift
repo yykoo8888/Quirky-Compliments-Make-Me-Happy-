@@ -16,6 +16,10 @@ import SwiftUI
             Compliment(setup:"Your fashion sense is out of this world, literally!"),
             Compliment(setup:"Your jokes should be in a museum because they're truly works of art."),
             Compliment(setup:"You have a heart of gold, and I'm not just talking about your jewelry."),
+            Compliment(setup:"You're like a human emoji, always expressing yourself with the perfect facial expressions."),
+            Compliment(setup:"Your imagination must be a treasure trove because you come up with the most wonderfully bizarre ideas!"),
+            Compliment(setup:"If creativity were a superpower, you would be the superhero of the artistic world!"),
+            Compliment(setup:"Your ability to find joy in the little things is truly inspiring. You could probably make a game out of folding laundry!"),
         ]
         
         @State private var index = 0

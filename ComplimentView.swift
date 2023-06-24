@@ -23,6 +23,7 @@ struct ComplimentView: View {
     @State private var showAlert = false
     @State private var isPositiveFeedback = false
     
+    
     var body: some View {
         VStack {
             Text("Quirky Compliments")
@@ -65,7 +66,6 @@ struct ComplimentView: View {
             if index == compliments.count {
                 index = 0
                 print("Restarted")
-                    
             }
         }
     }

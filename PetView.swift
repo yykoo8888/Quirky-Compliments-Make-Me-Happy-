@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct PetView: View {
+    
+@State private var happinessIndex = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Happiness level: \(happinessIndex) / 100")
+            Image(systemName: "teddybear.fill")
+                .resizable()
+                .scaledToFit()
+         //   if isPositiveFeedback = true
+
+  
+            
+            
+            
+            
+            //CLosing for VStack
+        }
+        
+            
     }
 }
 

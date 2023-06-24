@@ -23,6 +23,7 @@ import SwiftUI
         @State private var showAlert = false
         @State private var isPositiveFeedback = false
         @State private var happinessIndex = 0
+        @State private var size = 295.0
    
     var body: some View {
         TabView {
@@ -30,9 +31,19 @@ import SwiftUI
             VStack{
                 Text("Happiness level: \(happinessIndex) / 50")
                 if happinessIndex < 10 {
-                    Image(systemName: "teddybear.fill")
-                        .resizable()
-                        .scaledToFit()
+                    ZStack{
+                        Image(systemName: "teddybear.fill")
+                            .resizable()
+                            .scaledToFit()
+                        
+                        Text("🤨")
+                            .font(.system(size: size))
+                            .offset(y: -70)
+                            .onTapGesture {
+                                size += 4
+                                happinessIndex += 2
+                            }
+                    }
                 } else if happinessIndex >= 10 && happinessIndex < 25 {
                     ZStack{
                         Image(systemName: "teddybear.fill")
@@ -40,8 +51,12 @@ import SwiftUI
                             .scaledToFit()
                         
                         Text("😀")
-                            .font(.system(size: 295))
+                            .font(.system(size: size))
                             .offset(y: -70)
+                            .onTapGesture {
+                                size += 4
+                                happinessIndex += 2
+                            }
                             
                     }
                 } else if happinessIndex >= 25 {
@@ -51,8 +66,12 @@ import SwiftUI
                             .scaledToFit()
                         
                         Text("🤩")
-                            .font(.system(size: 295))
+                            .font(.system(size: size))
                             .offset(y: -70)
+                            .onTapGesture {
+                                size += 4
+                                happinessIndex += 2
+                            }
                     }
                 } else if happinessIndex == 50 {
                     ZStack{
@@ -61,8 +80,12 @@ import SwiftUI
                             .scaledToFit()
                         
                         Text("🥳")
-                            .font(.system(size: 295))
+                            .font(.system(size: size))
                             .offset(y: -70)
+                            .onTapGesture {
+                                size += 4
+                                happinessIndex += 2
+                            }
                     }
                 }
             
@@ -85,7 +108,6 @@ import SwiftUI
                     withAnimation{
                         showCompliment = true
                     }
-                    showAlert = true
                     if isPositiveFeedback == true {
                         happinessIndex += 5
                     }
@@ -97,12 +119,12 @@ import SwiftUI
                     }
                     if showCompliment {
                         index += 1
-                    //showCompliment = false
                     }
                     if index == compliments.count {
                         index = 0
                         print("Restarted")
                     }
+                    showAlert = true
                    
                 } label: {
                     Text("Generate Compliment")

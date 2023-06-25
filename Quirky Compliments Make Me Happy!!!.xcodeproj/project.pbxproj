@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		991AABB42A48140200C95E82 /* Sad rain img.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 991AABB32A48140100C95E82 /* Sad rain img.jpeg */; };
 		99E2FBEB2A46C9F800A7960B /* Compliment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2FBEA2A46C9F800A7960B /* Compliment.swift */; };
 		99E2FBED2A46CD9900A7960B /* ComplimentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2FBEC2A46CD9900A7960B /* ComplimentsView.swift */; };
 		99E2FBEF2A46CDB600A7960B /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2FBEE2A46CDB600A7960B /* PetView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		991AABB32A48140100C95E82 /* Sad rain img.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sad rain img.jpeg"; sourceTree = "<group>"; };
 		99E2FBEA2A46C9F800A7960B /* Compliment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compliment.swift; sourceTree = "<group>"; };
 		99E2FBEC2A46CD9900A7960B /* ComplimentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplimentsView.swift; sourceTree = "<group>"; };
 		99E2FBEE2A46CDB600A7960B /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				D16E97A82A46A2FD000D8403 /* Quirky_Compliments_Make_Me_Happy___App.swift */,
 				D16E97AA2A46A2FD000D8403 /* ContentView.swift */,
+				991AABB32A48140100C95E82 /* Sad rain img.jpeg */,
 				D16E97AC2A46A2FE000D8403 /* Assets.xcassets */,
 				D16E97AE2A46A2FE000D8403 /* Preview Content */,
 			);
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991AABB42A48140200C95E82 /* Sad rain img.jpeg in Resources */,
 				D16E97B02A46A2FE000D8403 /* Preview Assets.xcassets in Resources */,
 				D16E97AD2A46A2FE000D8403 /* Assets.xcassets in Resources */,
 			);

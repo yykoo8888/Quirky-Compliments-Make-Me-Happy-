@@ -36,13 +36,17 @@ import SwiftUI
                 Text("Happiness level: \(happinessIndex) / 50")
                 if happinessIndex < 10 {
                     ZStack{
+                        Image("rain")
+                            .resizable()
+                            .frame(width: 450, height: 450)
+                        
                         Image(systemName: "teddybear.fill")
                             .resizable()
                             .scaledToFit()
                         
-                        Text("🤨")
+                        Text("😭")
                             .font(.system(size: size))
-                            .offset(y: -70)
+                            .offset(y: -80)
                             .onTapGesture {
                                 size += 4
                                 happinessIndex += 2
@@ -50,48 +54,82 @@ import SwiftUI
                     }
                 } else if happinessIndex >= 10 && happinessIndex < 25 {
                     ZStack{
+                        LinearGradient(
+                            gradient: Gradient(colors: [Color.red, Color.blue]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing)
+                                .edgesIgnoringSafeArea(.all)
+                        
                         Image(systemName: "teddybear.fill")
                             .resizable()
                             .scaledToFit()
                         
                         Text("😀")
                             .font(.system(size: size))
-                            .offset(y: -70)
+                            .offset(y: -80)
                             .onTapGesture {
                                 size += 4
                                 happinessIndex += 2
                             }
                             
                     }
-                } else if happinessIndex >= 25 {
+                } else if happinessIndex >= 25 && happinessIndex < 40 {
                     ZStack{
+                        LinearGradient(
+                            gradient: Gradient(colors: [
+                                Color.red,
+                                Color.orange,
+                                Color.yellow,
+                                Color.green,
+                                Color.blue,
+                                Color.purple
+                            ]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing)
+                                .edgesIgnoringSafeArea(.all)
+                        
                         Image(systemName: "teddybear.fill")
                             .resizable()
                             .scaledToFit()
                         
                         Text("🤩")
                             .font(.system(size: size))
-                            .offset(y: -70)
+                            .offset(y: -80)
                             .onTapGesture {
                                 size += 4
                                 happinessIndex += 2
                             }
                     }
-                } else if happinessIndex == 50 {
+                } else if happinessIndex >= 40 && happinessIndex < 50 {
                     ZStack{
+                        RadialGradient(
+                                    gradient: Gradient(colors: [
+                                        Color.red,
+                                        Color.yellow,
+                                        Color.green,
+                                        Color.blue
+                                    ]),
+                                    center: UnitPoint(x: 0.5, y: 0.6),
+                                    startRadius: 0,
+                                    endRadius: 450
+                                )
+                                .edgesIgnoringSafeArea(.all)
+                                
+                        
                         Image(systemName: "teddybear.fill")
                             .resizable()
                             .scaledToFit()
                         
                         Text("🥳")
                             .font(.system(size: size))
-                            .offset(y: -70)
+                            .offset(y: -80)
                             .onTapGesture {
                                 size += 4
                                 happinessIndex += 2
                             }
                     }
                 }
+                 
             
                 
             }
@@ -112,6 +150,10 @@ import SwiftUI
                     withAnimation{
                         showCompliment = true
                     }
+                    if happinessIndex > 50 {
+                           happinessIndex = 0
+                           print ("Restart Happiness Level")
+                   }
                     if isPositiveFeedback == true {
                         happinessIndex += 5
                     }
@@ -156,6 +198,21 @@ import SwiftUI
             
             .tabItem {
             Label("Compliments", systemImage: "hand.thumbsup.fill")
+            }
+            
+            //EmojiView
+           
+            
+            VStack{
+                
+            
+            }
+            
+
+           
+            
+            .tabItem {
+            Label("Emoji Game", systemImage: "gamecontroller.fill")
             }
             //closing of TabView
         }

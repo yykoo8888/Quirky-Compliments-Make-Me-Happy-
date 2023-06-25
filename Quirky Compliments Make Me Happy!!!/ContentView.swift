@@ -10,16 +10,17 @@ import SwiftUI
     struct ContentView: View {
         
         let compliments = [
-            Compliment(setup:"Your smile is contagious, like a laughter epidemic!"),
-            Compliment(setup:"You're so cool, you make ice jealous."),
+            Compliment(setup:"Your smile is contagious, like a laughter epidemic!🦠"),
+            Compliment(setup:"You're so cool, you make ice jealous. 🧊"),
             Compliment(setup:"You're a master of randomness, in a good way!"),
-            Compliment(setup:"Your fashion sense is out of this world, literally!"),
-            Compliment(setup:"Your jokes should be in a museum because they're truly works of art."),
-            Compliment(setup:"You have a heart of gold, and I'm not just talking about your jewelry."),
-            Compliment(setup:"You're like a human emoji, always expressing yourself with the perfect facial expressions."),
+            Compliment(setup:"Your fashion sense is out of this world, literally!👗 🌍"),
+            Compliment(setup:"Your jokes should be in a museum because they're truly works of art.🎨"),
+            Compliment(setup:"You have a heart of gold, and I'm not just talking about your jewelry. 💎 💛"),
+            Compliment(setup:"You're like a human emoji, always expressing yourself with the perfect facial expressions.😭🥰🤪🤓"),
             Compliment(setup:"Your imagination must be a treasure trove because you come up with the most wonderfully bizarre ideas!"),
             Compliment(setup:"If creativity were a superpower, you would be the superhero of the artistic world!"),
-            Compliment(setup:"Your ability to find joy in the little things is truly inspiring. You could probably make a game out of folding laundry!"),
+            Compliment(setup:"Your ability to find joy in the little things is truly inspiring. You could probably make a game out of folding laundry! 🧺"),
+            Compliment(setup:"Your amazingness is to die for!!!"),
         ]
         
         @State private var index = 0
@@ -180,6 +181,7 @@ import SwiftUI
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                
                 if showCompliment == true {
                     Text(compliments[index].setup)
                         .multilineTextAlignment(.center)

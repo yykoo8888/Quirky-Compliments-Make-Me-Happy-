@@ -20,7 +20,7 @@ import SwiftUI
             Compliment(setup:"Your imagination must be a treasure trove because you come up with the most wonderfully bizarre ideas!"),
             Compliment(setup:"If creativity were a superpower, you would be the superhero of the artistic world!"),
             Compliment(setup:"Your ability to find joy in the little things is truly inspiring. You could probably make a game out of folding laundry! 🧺"),
-            Compliment(setup:"Your amazingness is to die for!!!"),
+            Compliment(setup:"Your amazingness is to die for!!! ☠️"),
         ]
         
         @State private var index = 0
@@ -29,6 +29,8 @@ import SwiftUI
         @State private var isPositiveFeedback = false
         @State private var happinessIndex = 0
         @State private var size = 295.0
+        @State var emojis = ["😭", "😃", "😡","😂","😍"]
+    
    
     var body: some View {
         TabView {

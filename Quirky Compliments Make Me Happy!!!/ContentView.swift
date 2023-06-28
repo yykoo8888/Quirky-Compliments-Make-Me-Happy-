@@ -151,26 +151,7 @@ import SwiftUI
                     withAnimation{
                         showCompliment = true
                     }
-                    if happinessIndex > 50 {
-                           happinessIndex = 0
-                           print ("Restart Happiness Level")
-                   }
-                    if isPositiveFeedback == true {
-                        happinessIndex += 5
-                    }
-                    else {
-                        happinessIndex -= 2
-                    }
-                    if happinessIndex == 50 {
-                        print("Yay! You are ecstatic!!!")
-                    }
-                    if showCompliment {
-                        index += 1
-                    }
-                    if index == compliments.count {
-                        index = 0
-                        print("Restarted")
-                    }
+                    
                     showAlert = true
                    
                 } label: {
@@ -192,10 +173,51 @@ import SwiftUI
             .alert("Did you like that compliment?", isPresented: $showAlert) {
                 Button("Yes!!!", role: .cancel){
                     isPositiveFeedback = true
+                    if happinessIndex > 50 {
+                           happinessIndex = 0
+                           print ("Restart Happiness Level")
+                   }
+                    if isPositiveFeedback == true {
+                        happinessIndex += 5
+                    }
+                    else {
+                        happinessIndex -= 2
+                    }
+                    if happinessIndex == 50 {
+                        print("Yay! You are ecstatic!!!")
+                    }
+                    if showCompliment {
+                        index += 1
+                    }
+                    if index == compliments.count {
+                        index = 0
+                        print("Restarted")
+                    }
                 }
                 Button("Noooo!!!", role: .destructive){
                     isPositiveFeedback = false
+                    if happinessIndex > 50 {
+                           happinessIndex = 0
+                           print ("Restart Happiness Level")
+                   }
+                    if isPositiveFeedback == true {
+                        happinessIndex += 5
+                    }
+                    else {
+                        happinessIndex -= 2
+                    }
+                    if happinessIndex == 50 {
+                        print("Yay! You are ecstatic!!!")
+                    }
+                    if showCompliment {
+                        index += 1
+                    }
+                    if index == compliments.count {
+                        index = 0
+                        print("Restarted")
+                    }
                 }
+                
             }
             
             .tabItem {
